@@ -72,8 +72,11 @@ img {
   width: 100%;
   display: block;
 }
+.text-white {
+  color: var(--cl-white);
+}
 .section {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 .center {
   width: var(--small-width);
@@ -103,7 +106,8 @@ Buttons
 */
 
 .btn-black,
-.btn-primary {
+.btn-primary,
+.btn-white {
   text-transform: uppercase;
   letter-spacing: var(--spacing);
   border: 2px solid var(--cl-black);
@@ -130,6 +134,15 @@ Buttons
 .btn-primary:hover {
   background: transparent;
   color: var(--cl-primary);
+}
+.btn-white {
+  background: var(--cl-white);
+  color: var(--cl-black);
+  border-color: var(--cl-white);
+}
+.btn-white:hover {
+  background: transparent;
+  color: var(--cl-white);
 }
 /* 
 ====== 
@@ -189,7 +202,7 @@ About
   .about-img-first {
     position: relative;
     top: 3rem;
-    left: 5rem;
+    left: 6rem;
   }
   .about-img-second {
     position: relative;
@@ -205,4 +218,98 @@ Specials
 */
 .specials-section {
   background: var(--cl-bc-grey);
+}
+.specials-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(23.04rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 3rem;
+  /* more content */
+  align-items: start;
+}
+.special {
+  background: var(--cl-white);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+.special:hover {
+  box-shadow: var(--shadow-dark);
+}
+.special-footer {
+  padding: 1.25rem;
+}
+.special-footer h4 {
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+.special-footer p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--cl-text-grey);
+}
+/* 
+====== 
+Booking
+======
+*/
+.booking-section {
+  background: linear-gradient(to right, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.2)),
+    url("./images/booking-bcg.jpg") center/cover no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .booking-center {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 3rem;
+  }
+  .booking-btn {
+    align-self: center;
+    justify-self: center;
+  }
+}
+/* 
+====== 
+Tiles
+======
+*/
+.tiles {
+  display: none;
+}
+@media screen and (min-width: 1170px) {
+  .tiles {
+    padding: 3rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    grid-template-areas:
+      "a b b b"
+      "a c d e"
+      "a f f g ";
+  }
+  .tiles img {
+    height: 100%;
+  }
+  .tile-1 {
+    grid-area: a;
+  }
+  .tile-2 {
+    grid-area: b;
+  }
+  .tile-3 {
+    grid-area: c;
+  }
+  .tile-4 {
+    grid-area: d;
+  }
+  .tile-5 {
+    grid-area: e;
+  }
+  .tile-6 {
+    grid-area: f;
+  }
+  .tile-7 {
+    grid-area: g;
+  }
 }
