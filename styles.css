@@ -72,7 +72,7 @@ img {
   display: block;
 }
 .section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 .center {
   width: var(--small-width);
@@ -142,10 +142,11 @@ About
 .about-img {
   display: none;
 }
-@media screen and (min-width: 1200px) {
+
+@media screen and (min-width: 992px) {
   .about-center {
     display: grid;
-    row-gap: 4rem;
+    row-gap: 3rem;
   }
   .about-img {
     display: grid;
@@ -153,26 +154,34 @@ About
     grid-template-columns: 2fr 3fr;
     column-gap: 3rem;
   }
+  .about-img-first,
+  .about-img-second {
+    border: 0.5rem solid var(--cl-primary);
+  }
 }
+
 @media screen and (min-width: 1400px) {
+  .about-section {
+    padding: 6rem 0;
+  }
   .about-center {
     display: grid;
     grid-template-columns: 2fr 3fr;
     column-gap: 3rem;
   }
+
   .about-img-first {
-    border: 0.4rem solid var(--cl-primary);
     position: relative;
     top: 3rem;
     left: 5rem;
   }
   .about-img-second {
-    border: 0.4rem solid var(--cl-primary);
     position: relative;
     bottom: 3rem;
     z-index: -1;
   }
 }
+
 /* 
 ====== 
 Specials
