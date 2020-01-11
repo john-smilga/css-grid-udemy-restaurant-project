@@ -15,7 +15,8 @@ Variables
   --cl-black: #222;
   --cl-white: #fff;
   --cl-off-white: #f7f7f7;
-  --cl-main-grey: #827f79;
+  --cl-text-grey: #827f79;
+  --cl-bc-grey: #f8f9fa;
   --ft-body: "Cardo", serif;
   --ft-title: "Great Vibes", cursive;
   --transition: all 0.3s linear;
@@ -89,10 +90,10 @@ img {
 .section-title h3 {
   color: var(--cl-primary);
   font-family: var(--ft-title);
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .section h2 {
-  font-size: 3.125rem;
+  font-size: 2.2rem;
 }
 
 /* 
@@ -136,7 +137,7 @@ About
 ======
 */
 .about-info p {
-  color: var(--cl-main-grey);
+  color: var(--cl-text-grey);
   margin-bottom: 2rem;
 }
 .about-img {
@@ -179,7 +180,7 @@ About
     grid-template-columns: 2fr 3fr;
   }
   .about-section {
-    padding: 6rem 0;
+    padding: 8rem 0;
   }
   .about-center {
     grid-template-columns: 2fr 3fr;
@@ -202,6 +203,6 @@ About
 Specials
 ======
 */
-.specials-center {
-  background: red;
+.specials-section {
+  background: var(--cl-bc-grey);
 }
