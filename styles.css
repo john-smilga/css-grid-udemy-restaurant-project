@@ -287,6 +287,10 @@ Chef
   color: var(--cl-text-grey);
   margin-bottom: 2rem;
 }
+.chef-image{
+   -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
 @media screen and (min-width: 1170px) {
   .chef-center {
     grid-template-columns: 1fr 1fr;
@@ -295,8 +299,7 @@ Chef
   .chef-image{
     align-self: stretch;
     object-fit: cover;
-    -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+   
   }
 }
 /* 
