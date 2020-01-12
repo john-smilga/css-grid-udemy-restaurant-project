@@ -86,6 +86,7 @@ img {
   max-width: var(--full-width);
   margin: 0 auto;
 }
+
 .section-title {
   text-transform: capitalize;
   margin-bottom: 3rem;
@@ -228,10 +229,15 @@ Specials
 .specials-center {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(23.04rem, 1fr));
-  column-gap: 2rem;
+  column-gap: 1rem;
   row-gap: 3rem;
   /* more content */
   align-items: start;
+}
+@media screen and (min-width: 992px) {
+  .specials-center {
+    width: 95vw;
+  }
 }
 .special {
   background: var(--cl-white);
@@ -360,12 +366,12 @@ Questions
 .question:hover .question-btn {
   color: var(--cl-primary);
 }
-.question-content {
+/* .question-content {
   display: none;
 }
 .show-content {
   display: block;
-}
+} */
 /* 
 ====== 
 Tiles
