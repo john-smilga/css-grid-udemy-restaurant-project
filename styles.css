@@ -86,7 +86,11 @@ img {
   max-width: var(--full-width);
   margin: 0 auto;
 }
-
+@media screen and (min-width: 992px) {
+  .center {
+    width: 95vw;
+  }
+}
 .section-title {
   text-transform: capitalize;
   margin-bottom: 3rem;
@@ -234,11 +238,7 @@ Specials
   /* more content */
   align-items: start;
 }
-@media screen and (min-width: 992px) {
-  .specials-center {
-    width: 95vw;
-  }
-}
+
 .special {
   background: var(--cl-white);
   box-shadow: var(--shadow-light);
@@ -382,11 +382,12 @@ Tiles
 }
 @media screen and (min-width: 1170px) {
   .tiles {
-    padding: 3rem;
     display: grid;
-    grid-gap: 2rem;
+    background: var(--cl-primary);
+    grid-gap: 1rem;
+    padding: 1rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 22rem 15rem 22rem;
+    grid-template-rows: 21rem 14rem 21rem;
     grid-template-areas:
       "a b b b"
       "a c d e"
