@@ -16,7 +16,7 @@ Variables
   --cl-white: #fff;
   --cl-off-white: #f7f7f7;
   --cl-text-grey: #827f79;
-  --cl-bc-grey: #f8f9fa;
+  --cl-bg-grey: #f8f9fa;
   --ft-body: "Cardo", serif;
   --ft-title: "Great Vibes", cursive;
   --transition: all 0.3s linear;
@@ -53,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   letter-spacing: var(--spacing);
 }
 p {
@@ -74,6 +74,9 @@ img {
 }
 .text-white {
   color: var(--cl-white);
+}
+.bg-secondary {
+  background: var(--cl-bg-grey);
 }
 .section {
   padding: 6rem 0;
@@ -149,6 +152,7 @@ Buttons
 About
 ======
 */
+
 .about-info p {
   color: var(--cl-text-grey);
   margin-bottom: 2rem;
@@ -161,7 +165,8 @@ About
     display: grid;
     align-items: stretch;
     grid-template-columns: 2fr 3fr;
-    column-gap: 3rem;
+    column-gap: 1rem;
+    padding: 3rem 0;
   }
   .about-img-first,
   .about-img-second {
@@ -175,7 +180,10 @@ About
 @media screen and (min-width: 992px) {
   .about-center {
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
+    column-gap: 2rem;
+  }
+  .about-info {
+    align-self: center;
   }
   .about-img-first {
     display: none;
@@ -216,9 +224,7 @@ About
 Specials
 ======
 */
-.specials-section {
-  background: var(--cl-bc-grey);
-}
+
 .specials-center {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(23.04rem, 1fr));
@@ -238,14 +244,24 @@ Specials
 .special-footer {
   padding: 1.25rem;
 }
-.special-footer h4 {
-  text-transform: capitalize;
-  margin-bottom: 0.8rem;
+.special-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 2rem;
   font-size: 1.2rem;
 }
-.special-footer p {
+.special-info h4 {
+  text-transform: capitalize;
   margin-bottom: 0;
+}
+.special-price {
+  color: var(--cl-primary);
+  margin-bottom: 0;
+}
+.special-text {
   font-size: 0.9rem;
+  margin-bottom: 0;
+  width: 80%;
   color: var(--cl-text-grey);
 }
 /* 
@@ -267,6 +283,88 @@ Booking
     align-self: center;
     justify-self: center;
   }
+  .booking-center .section-title {
+    margin-bottom: 0;
+  }
+}
+/* 
+====== 
+Chef
+======
+*/
+.chef-center {
+  display: grid;
+  row-gap: 3rem;
+}
+.chef-info p {
+  color: var(--cl-text-grey);
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1170px) {
+  .chef-center {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+  .chef-image {
+    align-self: center;
+  }
+}
+.chef-image {
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+/* 
+====== 
+Questions
+======
+*/
+.question {
+  padding: 0 1rem;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  box-shadow: var(--shadow-light);
+  background: var(--cl-bg-grey);
+}
+.question-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
+  padding: 1rem 0;
+  transition: var(--transition);
+}
+.question-header p {
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+.question-btn {
+  align-self: center;
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.question-content {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+}
+.question-content p {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  color: var(--cl-text-grey);
+}
+.question:hover .question-header {
+  color: var(--cl-primary);
+}
+.question:hover .question-btn {
+  color: var(--cl-primary);
+}
+.question-content {
+  display: none;
+}
+.show-content {
+  display: block;
 }
 /* 
 ====== 
@@ -282,11 +380,11 @@ Tiles
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 250px);
+    grid-template-rows: 22rem 15rem 22rem;
     grid-template-areas:
       "a b b b"
       "a c d e"
-      "a f f g ";
+      "a f f e";
   }
   .tiles img {
     height: 100%;
@@ -308,8 +406,5 @@ Tiles
   }
   .tile-6 {
     grid-area: f;
-  }
-  .tile-7 {
-    grid-area: g;
   }
 }
