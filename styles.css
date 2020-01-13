@@ -162,46 +162,46 @@ About
   color: var(--cl-text-grey);
   margin-bottom: 2rem;
 }
-.about-img-second{
+.about-img-second {
   display: none;
 }
-.about-center{
+.about-center {
   display: grid;
   row-gap: 3rem;
 }
-.about-img-first,.about-img-second{
+.about-img-first,
+.about-img-second {
   max-height: 45rem;
   object-fit: cover;
-  border:0.5rem solid var(--cl-primary)
+  border: 0.5rem solid var(--cl-primary);
 }
-@media screen and (min-width:992px){
-  .about-center{
+@media screen and (min-width: 992px) {
+  .about-center {
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
   }
-  .about-info{
+  .about-info {
     align-self: center;
   }
 }
-@media screen and (min-width:1170px){
-  .about-img{
+@media screen and (min-width: 1170px) {
+  .about-img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
     column-gap: 1rem;
   }
-  .about-img-second{
+  .about-img-second {
     display: block;
   }
-  .about-img-first{
+  .about-img-first {
     position: relative;
-    top:3rem;
+    top: 3rem;
   }
-  .about-img-second{
+  .about-img-second {
     position: relative;
-    top:-3rem;
+    top: -3rem;
   }
-
 }
 /* 
 ====== 
@@ -287,8 +287,8 @@ Chef
   color: var(--cl-text-grey);
   margin-bottom: 2rem;
 }
-.chef-image{
-   -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+.chef-image {
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 @media screen and (min-width: 1170px) {
@@ -296,10 +296,9 @@ Chef
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
   }
-  .chef-image{
+  .chef-image {
     align-self: stretch;
     object-fit: cover;
-   
   }
 }
 /* 
@@ -357,3 +356,46 @@ Questions
 } */
 /* 
 
+/* 
+====== 
+Tiles
+======
+*/
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 10rem);
+  grid-template-areas:
+    "a b b c d"
+    "a e f f d"
+    "a g g h h";
+  gap: 1rem;
+}
+.tiles-1 {
+  grid-area: a;
+}
+.tiles-2 {
+  grid-area: b;
+}
+.tiles-3 {
+  grid-area: c;
+}
+.tiles-4 {
+  grid-area: d;
+}
+.tiles-5 {
+  grid-area: e;
+}
+.tiles-6 {
+  grid-area: f;
+}
+.tiles-7 {
+  grid-area: g;
+}
+.tiles-8 {
+  grid-area: h;
+}
+.tiles img {
+  height: 100%;
+  object-fit: cover;
+}
