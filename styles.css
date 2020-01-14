@@ -446,21 +446,19 @@ Feedback
 .feedback-active {
   color: var(--cl-primary);
 }
-@media screen and (min-width: 776px) {
+@media screen and (min-width: 992px) {
   .feedback-center {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 2fr;
     column-gap: 4rem;
   }
   .feedback-info {
-    align-self: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
 }
-@media screen and (min-width: 992px) {
-  .feedback-text p {
-    width: 75%;
-  }
-}
+
 /* 
 ====== 
 Tiles
