@@ -332,12 +332,77 @@ Booking
 }
 /* 
 ====== 
+Menu
+======
+*/
+.menu-buttons {
+  width: var(--small-width);
+  max-width: 36rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 2rem;
+}
+.menu-btn {
+  border: none;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.menu-btn:hover {
+  color: var(--cl-primary);
+}
+.menu-center {
+  display: grid;
+  gap: 2rem 1rem;
+}
+.menu-item img {
+  width: 11rem;
+  height: 7rem;
+  object-fit: cover;
+  border: 0.25rem solid var(--cl-primary);
+}
+.menu-item {
+  display: grid;
+  row-gap: 2rem;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.menu-item h5 {
+  margin-bottom: 0.5rem;
+}
+.menu-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  border-bottom: 2px dotted var(--cl-black);
+}
+.menu-item p {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 678px) {
+  .menu-item {
+    grid-template-columns: auto 1fr;
+    gap: 0 1rem;
+  }
+  .menu-center {
+    grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr));
+  }
+}
+
+/* 
+====== 
 Chef
 ======
 */
 .chef-center {
   display: grid;
-  row-gap: 3rem;
+  row-gap: 4rem;
 }
 .chef-info p {
   color: var(--cl-text-grey);
@@ -471,6 +536,11 @@ Feedback
     justify-content: center;
   }
 }
+/* 
+====== 
+Blog 
+======
+*/
 
 /* 
 ====== 
@@ -521,3 +591,8 @@ Tiles
     grid-area: g;
   }
 }
+/* 
+====== 
+Countdow
+======
+*/
